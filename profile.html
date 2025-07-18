@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>RE:PROFILE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="myVideo" class="fixed w-full h-full object-cover -z-10">
+    <source src="/profilewallpaper.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Navbar -->
+
+  
+  <nav class="bg-white shadow-md py-4 px-6 w-full flex justify-between items-center absolute top-0 left-0">
+    <div><a href="/index.html" class="profiletext text-xl hover:underline"><b>RE:</b>CONNECT</a></div>
+    <ul class="flex space-x-6 font-medium profiletext">
+      <li><a href="/index.html" class="hover:underline">HOME</a></li>
+      <li><a href="/HTML/chat.html" class="hover:underline">CHAT</a></li>
+      <li><a href="/HTML/resources.html" class="hover:underline">RESOURCES</a></li>
+      <li><a href="/HTML/profile.html" class="font-bold hover:underline">PROFILE</a></li>
+      <li><a href="/HTML/feedback.html" class="hover:underline">FEEDBACK</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile Section -->
+  <main class="flex-1 flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-4xl p-6 flex flex-col md:flex-row gap-6 items-center">
+      
+      <!-- Avatar -->
+      <div class="flex flex-col items-center text-center">
+        <img src="/PHOTOS/profile_image.JPG" alt="User Avatar" class="w-40 aspect-square object-cover rounded-full border-4 border-black-400 shadow-lg mb-4" />
+        <h2 class="text-2xl font-bold text-black-600">Josh</h2>
+        <p class="text-gray-700">Professional Procrastinator &amp; Nobody</p>
+      </div>
+
+      <!-- Details -->
+      <div class="w-full">
+        <h3 class="text-xl font-semibold text-black-500 mb-2">About Me</h3>
+        <p class="text-gray-700 mb-4">
+          I’m building experiences that blend the emotional and the digital, for the people. I love creating spaces where people can connect, share, and find comfort in the digital world. My journey is about making technology feel more human and accessible.
+        </p>
+        <p>"That's right, I am Kira. And what can you do? Kill me right here?</p>
+        <p>Hear this: I'm not only Kira, but I'm also God of the new world."</p>
+        <br>
+        <h3 class="text-xl font-semibold text-black-500 mb-2">Skills</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>HTML, CSS, JavaScript</li>
+          <li>OpenAI Integration</li>
+          <li>UI Design with TailwindCSS</li>
+        </ul>
+        <br>
+        <h3 class="text-xl font-semibold text-black-500 mb-2">Contact me!</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li><b>PHONE:</b> 021 023 77957</li>
+          <li><b>EMAIL:</b> sharpies.jb@gmail.com</li>
+          <li><b>ADDRESS:</b> 183 Richmond Road, Grey Lynn, Auckland 1021</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

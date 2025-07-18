@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RE:SUPPORT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="myVideo">
+    <source src="/resourceswallpaper.mp4" type="video/mp4">
+  </video>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-6 w-full flex justify-between items-center absolute top-0 left-0">
+    <div><a href="/index.html" class="resourcestext text-xl hover:underline"><b>RE:</b>CONNECT</a></div>
+    <ul class="flex space-x-6 font-medium resourcestext">
+      <li><a href="/index.html" class="hover:underline">HOME</a></li>
+      <li><a href="/HTML/chat.html" class="hover:underline">CHAT</a></li>
+      <li><a href="/HTML/resources.html" class="font-bold hover:underline">RESOURCES</a></li>
+      <li><a href="/HTML/profile.html" class="hover:underline">PROFILE</a></li>
+      <li><a href="/HTML/feedback.html" class="hover:underline">FEEDBACK</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main class="flex-1 flex items-center justify-center p-8">
+    <div class="glass-card w-full max-w-6xl p-6 flex flex-col md:flex-row gap-8">
+      
+      <!-- Image Section -->
+      <div class="flex-shrink-0 resources rounded-xl overflow-hidden shadow-md border border-gray-200" style="width: 16rem;">
+        <img src="/PHOTOS/resources_image.jpeg" alt="Comforting Illustration" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Resources Section -->
+      <div class="flex-1 space-y-6">
+        <h2 class="text-3xl resourcestext text-center md:text-left">RE:ALTERNATIVE-SUPPORT-OPTIONS</h2>
+        <p class="text-gray-700 text-center md:text-left">If you're in need of additional support, please consider reaching out to the following resources:</p>
+
+        <ul class="space-y-4 text-gray-800">
+          <li>
+            <strong>Mental Health New Zealand:</strong><br>
+            <a href="https://mentalhealth.org.nz/" target="_blank" class="text-blue-600 hover:underline"><i>mhanational.org</i></a>
+          </li>
+          <li>
+            <strong>Lifeline Helpline:</strong><br>
+            <i>0508 828 865 or text 4357 (Available 24/7)</i>
+          </li>
+          <li>
+            <strong>Suicide Crisis Helpline:</strong><br>
+            <i>0800 543 354 (Available 24/7)</i>
+          </li>
+          <li>
+            <strong>International Helplines:</strong><br>
+            <a href="https://www.befrienders.org" target="_blank" class="text-blue-600 hover:underline"><i>befrienders.org</i></a>
+          </li>
+          <li>
+            <strong>Therapy Resources & Directories:</strong><br>
+            <a href="https://www.psychologytoday.com" target="_blank" class="text-blue-600 hover:underline"><i>psychologytoday.com</i></a>
+          </li>
+        </ul>
+
+        <p class="text-sm text-gray-500 text-center md:text-left mt-6"><i>RE:CONNECT is not a substitute for professional help. Please reach out if you are in crisis.</i></p>
+      </div>
+    </div>
+  </main>
+
+</body>
+<script src="/script.js"></script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RE:CHAT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <!-- Background Video -->
+  <video autoplay muted loop id="myVideo">
+    <source src="/chatwallpaper.mp4" type="video/mp4">
+  </video>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-6 w-full flex justify-between items-center absolute top-0 left-0">
+    <div><a href="/index.html" class="chattext text-xl hover:underline"><b>RE:</b>CONNECT</a></div>
+    <ul class="flex space-x-6 font-medium chattext">
+      <li><a href="/index.html" class="hover:underline">HOME</a></li>
+      <li><a href="/HTML/chat.html" class="font-bold hover:underline">CHAT</a></li>
+      <li><a href="/HTML/resources.html" class="hover:underline">RESOURCES</a></li>
+      <li><a href="/HTML/profile.html" class="hover:underline">PROFILE</a></li>
+      <li><a href="/HTML/feedback.html" class="hover:underline">FEEDBACK</a></li>
+    </ul>
+  </nav>
+
+  <main class="flex-1 flex items-center justify-center p-4">
+    <div class="chatglass-card w-full p-6 flex flex-col md:flex-row gap-6 items-center">
+
+      <!-- Character Visual -->
+      <div class="flex flex-col items-center text-center w-full md:w-1/4">
+        <img src="/PHOTOS/character_image.webp" alt="User Avatar"
+          class="w-40 aspect-square object-cover rounded-full border-4 border-black-400 shadow-lg mb-4" />
+        <p class="text-lg chattext font-semibold">RIN</p>
+        <p class="text-sm text-gray-600">A new digital companion</p>
+        <br>
+        <p class="text-sm text-gray-500 italic">Do note that character customization is not currently available, but is planned for future versions.</p>
+      </div>
+
+      <!-- Chat Box -->
+      <div class="chatter-box w-full md:w-3/4 flex flex-col justify-between">
+        <div id="chat-box" class="p-4 space-y-2 bg-white bg-opacity-70 rounded-xl overflow-y-auto"
+          style="height: 400px">
+          <!-- Example messages -->
+          <div class="chat-bubble bg-blue-100 self-start">Hi. Or hello. Whichever feels softer today. I’m not a person, but I think and talk like one, sometimes sideways, sometimes clear. What would you like to do?</div>
+        </div>
+
+        <!-- Input -->
+        <form id="chat-form" class="mt-4 flex">
+          <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off"
+            class="flex-grow px-4 py-2 rounded-l-full border border-gray-300 focus:outline-none">
+          <button type="submit" class="px-6 py-2 bg-blue-400 hover:bg-blue-500 text-white rounded-r-full">Send</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</body>
+<script src="/script.js"></script>
+
+</html>

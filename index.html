@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>RE:CONNECT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="myVideo" class="fixed w-full h-full object-cover -z-10">
+    <source src="indexwallpaper.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-6 w-full flex justify-between items-center absolute top-0 left-0">
+    <div><a href="index.html" class="mikutext text-xl hover:underline"><b>RE:</b>CONNECT</a></div>
+    <ul class="flex space-x-6 font-medium mikutext">
+      <li><a href="index.html" class="font-bold hover:underline">HOME</a></li>
+      <li><a href="HTML/chat.html" class="hover:underline">CHAT</a></li>
+      <li><a href="HTML/resources.html" class="hover:underline">RESOURCES</a></li>
+      <li><a href="HTML/profile.html" class="hover:underline">PROFILE</a></li>
+      <li><a href="HTML/feedback.html" class="hover:underline">FEEDBACK</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Hero Section -->
+  <main class="flex-1 flex items-center justify-center p-6">
+    <div class="glass-card w-full max-w-3xl p-8 text-center flex flex-col items-center space-y-6">
+      <img src="PHOTOS/placeholder.jpeg" alt="AI Character" class="w-32 h-32 object-cover rounded-full border-4 border-black-300 shadow-lg" />
+      <h1 class="text-4xl"><b><mikutext>RE:</mikutext></b>CONNECT</h1>
+      <p class="text-lg">あなたの優しいデジタル友達へようこそ 🌸</p>
+      <p>Talk with <b>characters</b> in a relaxing, non-judgmental space, tailored to <b>you.</b></p>
+      <div class="flex space-x-4 pt-4">
+        <a href="HTML/chat.html" class="bg-black text-white px-6 py-2 rounded-full shadow-md hover:bg-gray-800 transition">Start <b>Chatting</b></a>
+        <a href="HTML/profile.html" class="bg-white text-black border border-black px-6 py-2 rounded-full shadow-md hover:bg-gray-100 transition">Alternative <b>Support</b></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

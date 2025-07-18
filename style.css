@@ -1,0 +1,112 @@
+/* BASEPLATE CSS */
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  background-image: url('https://i.imgur.com/v7aJxJ1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* TEXT BOX STYLING */
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: fit-content;;
+  padding: 2rem 3rem;
+}
+
+.chatglass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  padding: 0.5rem 1rem;
+}
+
+.chat-bubble {
+  max-width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.custom-chat-width {
+  max-width: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+/* KEYFRAME ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+
+/* TEXT STYLES */
+.bold {
+  font-weight: bold;
+}
+
+.mikutext {
+  color: #024144;
+}
+
+mikutext {
+  color: #024144;
+}
+
+.profiletext {
+  color: #df6d42
+}
+
+.resourcestext {
+  color: #5b6f98
+}
+
+.chattext {
+  color: #375576
+}

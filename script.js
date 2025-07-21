@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const reply = await getChatbotResponse(message);
       appendMessage("bot", reply);
     } catch (err) {
-      appendMessage("bot", "⚠️ Error: Unable to reach the chatbot.");
+      appendMessage("bot", "Component is currently disabled due to API fees. This is meant to happen. I'm poor.");
       console.error(err);
     }
   });

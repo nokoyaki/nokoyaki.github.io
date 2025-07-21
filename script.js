@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const apiKey = "";
 
+  let hasErroredOnce = false; // 👈 Track error state
+
   async function getChatbotResponse(message) {
     const endpoint = "https://api.openai.com/v1/chat/completions";
 
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         model: "gpt-4.1-nano",
         messages: [{
-          role: "user", content: "message"
+          role: "user", content: message // 👈 use actual message here
         }]
       })
     });
@@ -42,9 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
   function appendMessage(sender, message) {
-    if (!chatBox) return; // guard
+    if (!chatBox) return;
 
     const div = document.createElement("div");
     div.classList.add("chat-bubble", "fade-in-up");
@@ -71,8 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const reply = await getChatbotResponse(message);
       appendMessage("bot", reply);
+      hasErroredOnce = false; // 👈 Reset on success
     } catch (err) {
-      appendMessage("bot", "Component is currently disabled due to API fees. This is meant to happen. I'm poor.");
+      if (!hasErroredOnce) {
+        appendMessage("bot", "Component is currently disabled due to API fees. This is meant to happen. I'm poor.");
+        hasErroredOnce = true;
+      } else {
+        appendMessage("bot", "Ah yes, messaging again while the component is disabled. Dumbass.");
+      }
       console.error(err);
     }
   });

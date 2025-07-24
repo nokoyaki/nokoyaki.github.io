@@ -1,3 +1,5 @@
+// Checks that everything is loaded before running the script
+
 document.addEventListener("DOMContentLoaded", () => {
   const chatForm = document.getElementById("chat-form");
   const userInput = document.getElementById("user-input");
@@ -8,10 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const apiKey = "";
+  const apiKey = ""; // Add to enable the chatbot
 
-  let hasErroredOnce = false; // 👈 Track error state
+  let hasErroredOnce = false; // Tracks the error state
 
+
+// Connects to the OpenAI API 
+  
   async function getChatbotResponse(message) {
     const endpoint = "https://api.openai.com/v1/chat/completions";
 
@@ -24,10 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         model: "gpt-4.1-nano",
         messages: [{
-          role: "user", content: message // 👈 use actual message here
+          role: "user", content: message
         }]
       })
     });
+
+    
+// Error handling for a lack of an API response or any errors and alerts to the console
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -43,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
       throw new Error("No response from API");
     }
   }
+
+// Handles visual responses/messages from the API to the HTML the chat boxes
 
   function appendMessage(sender, message) {
     if (!chatBox) return;
@@ -69,16 +79,19 @@ document.addEventListener("DOMContentLoaded", () => {
     appendMessage("user", message);
     userInput.value = "";
 
+
+  // Handles other errors with the API and displays a message to the user
+
     try {
       const reply = await getChatbotResponse(message);
       appendMessage("bot", reply);
-      hasErroredOnce = false; // 👈 Reset on success
+      hasErroredOnce = false; // Resets on successful message
     } catch (err) {
       if (!hasErroredOnce) {
-        appendMessage("bot", "Component is currently disabled due to API fees. This is meant to happen. I'm poor.");
+        appendMessage("bot", "Component is currently unavailable, possibly due to API fees. This is meant to happen. I'm poor.");
         hasErroredOnce = true;
       } else {
-        appendMessage("bot", "Ah yes, messaging again while the component is disabled. Dumbass.");
+        appendMessage("bot", "The indomitable spirit of the chatbot is currently on a break.");
       }
       console.error(err);
     }
